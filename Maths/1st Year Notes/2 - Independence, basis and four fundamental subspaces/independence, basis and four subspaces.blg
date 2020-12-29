@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'independence, basis and four subspaces.blg'
+[93] biber-MSWIN64:322> INFO - === 
+[116] Biber.pm:415> INFO - Reading 'independence, basis and four subspaces.bcf'
+[236] Utils.pm:304> WARN - No data sources defined!

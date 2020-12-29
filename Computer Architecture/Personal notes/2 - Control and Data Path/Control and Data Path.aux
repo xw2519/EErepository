@@ -1,0 +1,38 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}The basic MIPS implementation}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Implementation overview}{2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A high-level view of a MIPS implementation\relax }}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Implementation of MIPS subset including necessary multiplexors and control lines. \relax }}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Logic design conventions}{5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Clocking}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Relation between combinational logic, state elements and the clock.\relax }}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Building the Data Path}{7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The core portion of the datapath for fetching instructions and incrementing PC.\relax }}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Register (R)-based instructions}{7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Register file: The inputs carrying the register number to the register file are all $5$ bits wide, whereas the lines carrying data values are $32$ bits wide.\relax }}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Data path flow of R type instructions\relax }}{8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Memory access (I) type instructions}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Data path flow of I type instruction \texttt  {lw}\relax }}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Data path flow of I type instruction \texttt  {rw}\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Datapath for a branch using the \texttt  {ALU} to evaluate the branch condition and a separate adder \texttt  {Add} to compute the branch target as the sum of the incremented \texttt  {PC} and the \textbf  {sign-extended, lower 16 bits} of the instruction, shifted left 2 bits. The control logic from the \texttt  {ALU} is used to decide whether the incremented PC or branch target should replace the PC.\relax }}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Combining into single data path}{12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The datapath for the memory instructions and the R-type instructions.\relax }}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}A Simple Implementation Scheme}{13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces How ALU control bits are set depending on the \texttt  {ALUOp} control bits and the different function field for the R-type instruction.\relax }}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}ALU control}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Designing the Main Control Unit}{15}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  The truth table for the 4 ALU control bits\relax }}{15}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Datapath with all necessary multiplexors and all control lines.\relax }}{16}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The control lines determined by the \textit  {OpCode} ﬁelds of the instruction.\relax }}{16}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces The effect of each of the seven control signals.\relax }}{17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces The simple datapath with the control unit\relax }}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Operation of the data path}{18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces The datapath in operation for an R-type instruction, such as \texttt  {add \$t1,\$t2,\$t3}.\relax }}{18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces The datapath in operation for a load instruction.\relax }}{19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces The datapath in operation for a branch-on-equal instruction. Note: After using the register file and ALU to perform the compare, the Zero output is used to select the next program counter from between the two candidates.\relax }}{20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Finalising the Control}{21}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces The control function for the simple single-cycle implementation is completely speciﬁed by this truth table.\relax }}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Jump instructions}{22}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Instruction format for the jump instruction (opcode = 2)\relax }}{22}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces The simple control and datapath are extended to handle the jump instruction\relax }}{23}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Single-cycle implementation}{24}\protected@file@percent }

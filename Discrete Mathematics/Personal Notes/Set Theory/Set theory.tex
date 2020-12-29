@@ -1,0 +1,204 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{biblatex}
+\usepackage{parskip}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+
+\lstset{basicstyle=\ttfamily, breaklines = true, tabsize=2}
+\graphicspath{ {./Images/} }
+\setlength{\parskip}{1em}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Imperial College London \par}
+	\vspace{1cm}
+    {\scshape\Large Discrete Mathematics: Year 2\par}
+    \vspace{1.5cm}
+	{\huge\bfseries Set Theory and Proof\par}
+	\vspace{2cm}
+	{\Large\ Xin Wang }
+	\vfill
+	{\large \today\par}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+    Set Theory is an important language and tool for reasoning. It is the basis of Mathematics and
+    Computer Science since Logic is basically Set Theory. It is a useful tool for formalizing and
+    reasoning about computations and its objects. \par 
+
+    Proof is the activity of finding and discovering and confirming the truth. This chapter
+    discusses how to write down proofs that are able to be communicated effectively. There is a
+    balance to proofs between too much detail and too little (being too strict) - just like a sating
+    in Italy: "It requires two people to make a good salad dress; a generous person to add oil and a
+    mean person to add the vinegar". A tolerant openness and awareness is critical in
+    discovering/understanding proofs while a strictness and discipline is required to write it down.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical argument}
+
+Introduces basic mathematical notation and the various method of "argument". 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Logical notation}
+
+For statements $A$ and $B$, there are common abbreviations:
+\begin{enumerate}
+    \item \textbf{Conjunction} of $A$ and $B$: $A$ and $B$ must both be TRUE or otherwise it is FALSE.
+    $$
+        A \textbf{ \& } B
+    $$
+    \item $A$ \textbf{implies} $B$: $B$ TRUE only if $A$ is TRUE.
+    $$
+        A \Rightarrow B
+    $$
+    \item $A$ \textbf{if} $B$: $A$ TRUE if and only if $B$ TRUE.
+    $$
+        A\Longleftrightarrow B
+    $$
+    \item not $A$: $A$ TRUE if $A$ is FALSE
+    $$
+        \neg A
+    $$
+\end{enumerate}
+
+Common logic quantifiers:
+\begin{enumerate}
+    \item "There exists": $\exists$
+    \item "For all": $\forall$
+    \item "There exists $x$ such that $P(x)$":
+    $$
+        \exists x\:.\:P(x)
+    $$
+    \item "There exists some $x$ satisfying a property $P(x)$ but also that $x$ is the
+    \textbf{unique} (only) object satisfying $P(x)$":
+    $$
+        (\exists x.P(x))\; \& \; (\forall y,z.P(y) \: \& \: P(z))\Rightarrow y = z
+    $$
+    Simplifies to:
+    $$
+        \exists !x.P(x)
+    $$
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Patterns of proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Chains of implications}
+
+To prove $A\Rightarrow B$, possible to show that assuming $A_1$ can be proved then possible to prove
+$B$.
+\begin{align*}
+    A &\Rightarrow A_1 \\
+    &\Rightarrow \dots \\
+    &\Rightarrow A_n \\
+    &\Rightarrow B
+\end{align*}
+Take care to differentiate between $\Rightarrow$ and $\Longleftrightarrow$ since sometimes the
+reverse direction is untrue.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Proof by contradiction}
+
+To show that $A$ is TRUE, sometimes it is only possible to show that $\neg A$ leads to a conclusion
+which is FALSE - show $\neg A$ is not the case so $A$.
+
+\textbf{Example 1}: Proof that $\sqrt{2}$ is irrational through proof by contradiction.
+\begin{enumerate}
+    \item Suppose $\sqrt{2}$ \textbf{is} rational - it can be written as ratio of two integers $p$
+    and $q$:
+    $$
+        \sqrt{2} = \frac{p}{q}
+    $$
+    where assumed that $p$ and $q$ have no common factors - if there are then they are cancelled out
+
+    Since $p$ and $q$ are simplified to the lowest terms, both $p$ and $q$ cannot be even - one
+    must be odd.
+    
+    \item Square both sides:
+    $$
+        2 = \frac{p^2}{q^2}
+    $$
+
+    \item Implies that:
+    $$
+        p^2 = 2q^2
+    $$
+
+    $p^2$ is an even number since it is $2 \times q^2$. 
+
+    \item Note $q$ is \textbf{also even} since if $q$ is odd then $q^2$ will be odd - odd number
+    times odd number is always odd.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Argument by cases}
+
+Proof of $A_k \Rightarrow C$ requires the proof of $A_1\Rightarrow C$ to/and $A_k\Rightarrow C$.
+Most often a proof breaks down into $k$ cases showing $A_1\Rightarrow C$,\dots,$A_k\Rightarrow C$.
+
+\textbf{Example 1}: For all non-negative integers $a>b$, the difference of squares $a^2-b^2$ does
+not give a remainder of $2$ when divided by $4$.
+\begin{enumerate}
+    \item Observe that:
+    $$
+        a^2-b^2 = (a+b)(a-b)
+    $$
+    \item Establish cases: 
+    \begin{itemize}
+        \item $a$ and $b$ are both even 
+        \item $a$ and $b$ are both odd
+        \item One is odd and the other one even.
+    \end{itemize}
+    \item Test the cases:
+    \begin{itemize}
+        \item Case 1: Both $a$ and $b$ are even: The product of two even numbers are divisible by 4,
+        giving remainder 0.
+        \item Case 2: Both $a$ and $b$ are odd: The product of two odd numbers are divisible by 4,
+        giving remainder 0.
+        \item Case 3: One is odd and the other even: Product is odd and remainder of 2 when divided
+        by 4 - \textbf{a contradiction}.
+    \end{itemize}
+\end{enumerate} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Existential properties}
+
+Proving $\exists x\:.\:A(x)$, it suffices by showing an object $a$ such that $A(a)$. \par 
+
+For example, one can show that $\exists x\:.\:A(x)$ by obtaining a contradiction - $\exists x \:.\:
+\neg A(x)$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Universal properties}
+
+Simplest way to prove $\forall x\:.\:A(x)$ is to let $x$ be an arbitrary element and show $A(x)$.
+There are famous examples such as \textit{mathematical induction}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mathematical induction}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sets}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

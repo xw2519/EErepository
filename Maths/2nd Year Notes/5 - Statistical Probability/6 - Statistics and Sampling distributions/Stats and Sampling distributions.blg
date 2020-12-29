@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'Stats and Sampling distributions.blg'
+[73] biber-MSWIN64:322> INFO - === 
+[93] Biber.pm:415> INFO - Reading 'Stats and Sampling distributions.bcf'
+[200] Utils.pm:304> WARN - No data sources defined!

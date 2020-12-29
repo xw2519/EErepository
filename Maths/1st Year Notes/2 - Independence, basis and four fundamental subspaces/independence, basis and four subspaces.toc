@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Column Rank and Row Rank}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Echelon form}{3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.1}Row echelon form}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.2}Reduced row echelon form}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Linear Independence}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Vectors that 'Span' a Subspace}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Basis for a Vector Space}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Dimension}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}The Four Fundamental Subspaces}{9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}The basis and dimension of the Four Fundamental Subspaces}{9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1}Column space $C(A)$:}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.2}Row space $C(A^T)$}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.3}Nullspace $N(A)$:}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.4}Left null space $N(A^T)$:}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Examples}{14}%

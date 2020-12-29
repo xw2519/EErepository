@@ -1,0 +1,49 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Two discrete random variables}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Joint probability distribution}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Marginal probability distributions (Marginal PMF)}{3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Two continuous random variables}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Joint probability distribution}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Marginal probability distributions (Marginal PMF)}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Independence}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}More than 2 variables}{9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}Conditional distributions}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Expectation and Variance}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Expectation}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1}Conditional expectation}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Conditional Variance}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Covariance and Correlation}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Covariance}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Correlation}{17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.1}Lemma-Cauchy-Schwartz's inequality}{17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2}Properties of the correlation coefficient}{18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Covariance and Correlation matrices}{19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Joint Normal (Gaussian) Distribution}{19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Moments}{20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Relationship of MGF with Fourier Transform}{22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Sum of random variables}{22}%

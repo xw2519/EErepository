@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}The basic MIPS implementation}{2}%
+\contentsline {subsection}{\numberline {1.1}Implementation overview}{2}%
+\contentsline {section}{\numberline {2}Logic design conventions}{5}%
+\contentsline {subsection}{\numberline {2.1}Clocking}{6}%
+\contentsline {section}{\numberline {3}Building the Data Path}{7}%
+\contentsline {subsection}{\numberline {3.1}Register (R)-based instructions}{7}%
+\contentsline {subsection}{\numberline {3.2}Memory access (I) type instructions}{9}%
+\contentsline {subsection}{\numberline {3.3}Combining into single data path}{12}%
+\contentsline {section}{\numberline {4}A Simple Implementation Scheme}{13}%
+\contentsline {subsection}{\numberline {4.1}ALU control}{13}%
+\contentsline {subsection}{\numberline {4.2}Designing the Main Control Unit}{15}%
+\contentsline {subsection}{\numberline {4.3}Operation of the data path}{18}%
+\contentsline {subsection}{\numberline {4.4}Finalising the Control}{21}%
+\contentsline {subsection}{\numberline {4.5}Jump instructions}{22}%
+\contentsline {section}{\numberline {5}Single-cycle implementation}{24}%

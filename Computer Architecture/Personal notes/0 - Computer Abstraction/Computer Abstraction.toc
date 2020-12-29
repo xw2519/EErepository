@@ -1,0 +1,7 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Eight great ideas of computer architecture}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Computer structure organisation}{3}%
