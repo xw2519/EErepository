@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'Events, Probability, Sets, Random variables and Distributions.blg'
-[71] biber-MSWIN64:322> INFO - === 
-[90] Biber.pm:415> INFO - Reading 'Events, Probability, Sets, Random variables and Distributions.bcf'
-[198] Utils.pm:304> WARN - No data sources defined!

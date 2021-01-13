@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'Jointly Distributed Random Variables.blg'
-[74] biber-MSWIN64:322> INFO - === 
-[94] Biber.pm:415> INFO - Reading 'Jointly Distributed Random Variables.bcf'
-[200] Utils.pm:304> WARN - No data sources defined!

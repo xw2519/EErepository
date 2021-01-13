@@ -1,0 +1,90 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{amsmath,bm}
+\def\MLine#1{\par\hspace*{-\leftmargin}\parbox{\textwidth}{\[#1\]}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{1: Introduction}
+\author{Xin Wang}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{What is a signal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item A function of one or more variables representing data
+  \item Represented by a physical aspects e.g. voltage
+  \item Measured by observing physical aspects
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Types of signals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Continuous-time and discrete-time}
+
+\begin{itemize}
+  \item Continuous: 
+  \begin{itemize}
+    \item Signal defined for all time $t$
+    \item E.g. sound
+  \end{itemize}
+  \item Discrete: 
+  \begin{itemize}
+    \item Signal defined only at discrete instants of time $nT_s$
+    \item E.g. Digital music
+  \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Even and odd}
+
+\begin{itemize}
+  \item All signals composed of even and odd components
+  $$
+    x(t) = x_e(t) + x_o(t)
+  $$
+
+  \item Even:
+  $$
+    x_e(t) = \frac{1}{2}[x(t) + x(-t)]
+  $$
+  \begin{itemize}
+    \item Positive and negative are the same
+    $$
+      x_e(t) = x_e(-t)
+    $$
+  \end{itemize}
+
+  \item Odd:
+  $$
+    x_o(t) = \frac{1}{2}[x(t) - x(-t)]
+  $$
+  \begin{itemize}
+    \item Positive and negative are different
+    $$
+      x_o(t) = -x_o(-t)
+    $$
+  \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Periodic and non-periodic}
+
+\begin{itemize}
+  \item Continuous-time periodic $T_0$ signal:
+  $$
+    x(t) = x(t + T_0) \; \forall t
+  $$
+
+  \item Discrete-time periodic $N_0$ signal:
+  $$
+    x[n] = x[n + N_0]
+  $$
+  
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
