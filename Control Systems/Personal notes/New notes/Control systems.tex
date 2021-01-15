@@ -1,0 +1,93 @@
+\documentclass[conference]{IEEEtran}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,bm}
+\usepackage{graphicx}
+
+\def\MLine#1{\par\hspace*{-\leftmargin}\parbox{\textwidth}{\[#1\]}}
+\graphicspath{ {./Images/} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Control systems}
+\author{Xin Wang}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Control system}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.4]{Ex1.JPG}
+\end{figure}
+Notation:
+\begin{itemize}
+    \item $S_{\Theta}$: System to be controlled
+    \item $C$: Controller
+    \item $\Theta$: System parameters
+    \item $y$: Controlled variable i.e. output
+    \item $u$: Control variable (accessible)
+    \item $d$: Disturbance factors
+    \item $w$: Reference variable i.e. point 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Control system objective}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Act on $u$ to maintain $y \approx w$ in the presence of uncertainty
+    \begin{align*}
+        d  &= \bar{d} + \Delta d \\
+        \Theta &= \bar{\Theta} + \Delta \Theta
+    \end{align*}
+    \begin{itemize}
+        \item $\bar{d}$ and $\bar{\Theta}$ are known nominal values i.e. expected
+        \item $\Delta d$ and $\Delta \Theta$ are uncertainties 
+    \end{itemize}
+
+    \item Uncertainty $\Delta d$ may have a known upper bound
+    $$
+        |\Delta d| < \bar{D}
+    $$
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Controller}
+
+\begin{itemize}
+    \item Two kinds of controllers:
+    \begin{itemize}
+        \item Analog: Receives analog inputs and outputs analog 
+        \item Digital: Processes digital sampled variables in computing devices
+    \end{itemize}
+
+    \item Conversion between two types requires: \textbf{ADC} and \textbf{DAC}
+    \item Converters are synchronised via clock signal - period $T_s$
+    \item Discrete-time variables can be expressed with time index
+    $$
+        t_k = kT_s \Rightarrow k
+    $$
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Digital control systems}
+
+\begin{itemize}
+    \item \textbf{Hybrid systems} with analog and digital variables 
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex2.JPG}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
