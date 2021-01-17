@@ -77,13 +77,178 @@
   $$
     x(t) = x(t + T_0) \; \forall t
   $$
+  where $T_0$ is the \textbf{fundamental period}
 
   \item Discrete-time periodic $N_0$ signal:
   $$
     x[n] = x[n + N_0]
   $$
+  with \textbf{fundamental angular frequency} $\Omega_0 = \frac{2\pi}{N_0}$
   
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Deterministic and Random signals}
+
+\begin{itemize}
+  \item \textbf{Deterministic signal}: Specified function of time i.e. no uncertainty about signal
+  value at any observed instant of time 
+
+  \item \textbf{Random process}: Describes group of random signals 
+  \item \textbf{Random signal}: Cannot be determined before occurring
+  \begin{itemize}
+    \item Different waveform and occurring probabilities
+    \item A particular occurrence of a random process 
+  \end{itemize}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Energy and Power signal}
+
+\begin{itemize}
+  \item Described in terms of a $1 \Omega$ load
+  
+  \item \textbf{Instantaneous power}: 
+  $$
+    p(t) = \frac{v^2(t)}{R} = Ri^2(t) = x^2(t)
+  $$
+  
+  \item \textbf{Total energy}: 
+  \begin{align*}
+    E &= \lim_{T\rightarrow \infty} \int_{-\frac{T}{2}}^{\frac{T}{2}} x^2(t) dt \\
+    E &= \sum_{n=-\infty}^{n=\infty} x^2[n]
+  \end{align*}
+
+  \item \textbf{Average power}: 
+  \begin{align*}
+    P &= \lim_{T\rightarrow \infty} \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} x^2(t) dt   \\
+    P &= \lim_{N \rightarrow \infty} \frac{1}{N} \sum_{n=0}^{N-1} x^2[n]
+  \end{align*}
+
+  \item Signals either \textbf{energy signals} or \textbf{power signals}
+  \begin{itemize}
+    \item \textbf{Energy signal}: $0<E<\infty$ and $0$ power 
+    \item \textbf{Power signal}: $0<P<\infty$ and infinite energy
+    \item Signals can be neither power or energy signals
+  \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Special signals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+  \item Unit impulse function:
+  \begin{itemize}
+    \item Discrete-time:
+    \begin{align*}
+      \delta[n] = \begin{cases}
+        1 & n=0 \\
+        0 & n\neq 0
+      \end{cases}
+    \end{align*}
+
+    \item Continuous-time:
+    \begin{align*}
+      \int_{-\infty}^\infty \delta(t) dt = 1
+    \end{align*}
+    for $t=0$
+  \end{itemize}
+
+  \item Unit-step function:
+  \begin{align*}
+    u[n] = \begin{cases}
+      1 & n \geq 0 \\
+      0 & n < 0
+    \end{cases} \\
+    u(t) = \begin{cases}
+      1 & n \geq 0 \\
+      0 & n < 0
+    \end{cases} 
+  \end{align*}
+
+  \item Relationship:
+  \begin{align*}
+    \delta(t) = \frac{d}{dt} u(t) \; \text{and} \; u(t) = \int_{-\infty}^t \delta(\tau)
+  \end{align*}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Signal operations}
+
+\begin{itemize}
+  \item Amplification:
+  \begin{align*}
+    y(t) &= c*x(t) \\
+    y[n] &= c*x[n]
+  \end{align*}
+
+  \item Addition:
+  \begin{align*}
+    y(t) &= x_1(t) + x_2(t) \\
+    y[n] &= x_1[n] + x_2[n]
+  \end{align*}
+
+  \item Multiplication or modulation:
+  \begin{align*}
+    y(t) &= x_1(t)*x_2(t) \\
+    y[n] &= x_1[n]*x_2[n]
+  \end{align*}
+
+  \item Differentiation:
+  \begin{align*}
+    y(t) = \frac{d}{dt}x(t)
+  \end{align*}
+
+  \item Integration:
+  \begin{align*}
+    y(t) = \int_{-\infty}^t x{\tau} d\tau 
+  \end{align*}
+
+  \item Time scaling:
+  \begin{align*}
+    y(t) &= x(at) \\
+    y[n] &= x[kn]
+  \end{align*}
+  \begin{itemize}
+    \item $a>1$: Compression
+    \item $0<a<1$: Expansion
+  \end{itemize}
+
+  \item Time shifting:
+  \begin{itemize}
+    \item $t_0 > 0$: Shift to right i.e. delay
+    $$
+    y(t) = x(t - t_0)
+    $$
+    \item $t_0 < 0$: Shift to left i.e. advance
+    $$
+    y(t) = x(t + t_0)
+    $$
+  \end{itemize}
+
+  \item Time reflection:
+  $$
+    y(t) = x(-t)
+  $$
+\end{itemize}
+
+\subsection{Precedence Rule}
+\begin{itemize}
+  \item Time-shift first \textbf{before} time-scaling
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
