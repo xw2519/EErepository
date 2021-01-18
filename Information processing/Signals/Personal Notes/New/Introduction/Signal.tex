@@ -1,7 +1,9 @@
 \documentclass[conference]{IEEEtran}
 
 \usepackage{amsmath,bm}
+\usepackage{graphicx}
 \def\MLine#1{\par\hspace*{-\leftmargin}\parbox{\textwidth}{\[#1\]}}
+\graphicspath{ {./Images/} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -240,7 +242,90 @@
   \item Time-shift first \textbf{before} time-scaling
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Systems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{itemize}
+  \item \textbf{System}: Operations applied on the input signal
+  \item System operations can be represented mathematically 
+  \begin{figure} [h!]
+      \centering
+      \includegraphics[scale=0.5]{Ex1.JPG}
+  \end{figure}
+  \item Two important types of operations $H$:
+  \begin{itemize}
+    \item Linear or non-linear function
+    \item Time-invariant or time-varying function
+  \end{itemize}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Properties of a LTI system}
+
+\begin{itemize}
+  \item Linearity: Satisfies \textbf{superposition} and \textbf{homogeneity}
+  \begin{align*}
+    x(t) &= \sum_{i=1}^N a_i x_i(t) \\
+    y(t) &= \sum_{i=1}^N a_i y_i(t) 
+  \end{align*}
+  \begin{itemize}
+    \item Superposition: 
+    \begin{itemize}
+      \item Input: $x_1(t)$ and $x_2(t)$
+      \item Output: $y_1(t)$ and $y_2(t)$
+    \end{itemize}
+    $$
+      x_1(t) + x_2(t) = y_1(t) + y_2(t)
+    $$
+
+    \item Homogeneity:
+    \begin{itemize}
+      \item Input: $x_1(t)$ 
+      \item Output: $y_1(t)$
+    \end{itemize}
+    \begin{align*}
+      x_1(t) &= y_1(t) \\
+      a*x_1(t) &= a*y_1(t)
+    \end{align*}
+  \end{itemize}
+
+  \item Time-invariance: $H$ does not change over time 
+  \begin{itemize}
+    \item Time-shift in input equals time-shift of output
+  \end{itemize}
+
+  \item Memory and memoryless systems: 
+  \begin{itemize}
+    \item \textbf{Memoryless}: Function depends on current input
+    \item \textbf{Memory}: Function depends on past and future inputs
+  \end{itemize}
+
+  \item Stability: Stable if output bounded if input bounded 
+  \item \textbf{BIBO}: Bounded-input, bounded-output
+  \begin{align*}
+    |y(t)| \leq M_y < \infty \; \text{given} \; |x(t)| \leq M_x < \infty
+  \end{align*}
+  where $M_x$ and $M_y$ are finite positive bounds 
+
+  \item Most linear system applications require BIBO stability
+  
+  \item Causality: Output depends on \textbf{past} and \textbf{present} inputs
+  $$
+    y[n] = 0.25(x[n] + x[n - 1] + x[n - 2] + x[n - 3])
+  $$
+
+  \item \textbf{Non-causal}: Present, future and past input required
+  $$
+    y[n] = 0.25(x[n + 2] + x[n + 1] + x[n] + x[n - 1])
+  $$
+
+  \item \textbf{Anticausal}: Only future signal required 
+  $$
+    y[n] = 0.33(x[n + 3] + x[n + 2] + x[n + 1])
+  $$
+\end{itemize}
 
 
 

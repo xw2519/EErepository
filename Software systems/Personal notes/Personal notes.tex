@@ -16,7 +16,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Overview}
+\section{\textbf{Overview}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Analysing software systems}
 
@@ -59,7 +59,7 @@
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Entity Relation Modelling}
+\section{\textbf{Entity Relation Modelling}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
     \item Creates \textbf{Entity Relationship Diagram}
@@ -123,7 +123,7 @@
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Relationships: Sets of relations}
+\section{\textbf{Relationships: Sets of relations}}
 
 \begin{itemize}
     \item Entity sets contain distinct entities 
@@ -197,6 +197,150 @@
     \centering
     \includegraphics[scale=0.4]{Ex13.JPG}
 \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{ERM and Relations}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Entities can be mapped into relations i.e. ERM
+    \item ERM captures important aspects of the world
+    \item With an ERM, work can be done on data e.g. SQL
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Relations}
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.45]{Ex14.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item Relation composition:
+    \begin{itemize}
+        \item Relation Name
+        
+        \item Heading:
+        \begin{itemize}
+            \item Attributes:
+            \begin{itemize}
+                \item Name 
+                \item Type
+            \end{itemize}
+        \end{itemize}
+    
+        \item Body:
+        \begin{itemize}
+            \item Tuples 
+            \begin{itemize}
+                \item Attribute value i.e. name and value
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Database}: Collection of relations
+    \item \textbf{Relation Schema}: Relation name + Header
+    \begin{itemize}
+        \item \textit{movies(title:string, year:int, length:int, genre:string)}
+    \end{itemize}
+    \item \textbf{Database Schema}: Collection of relation schema
+\end{itemize}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ER diagrams $\rightarrow$ Relations $\rightarrow$ SQL}
+
+\begin{itemize}
+    \item Turning ER diagrams into concrete relations:
+    \begin{itemize}
+        \item ER attributes $\rightarrow$ Relation attributes 
+        \item ER entity $\rightarrow$ Relations 
+        \item ER relationship sets $\rightarrow$ Relations or may disappear 
+    \end{itemize}
+
+    \item Relations are then turned into SQL
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Structure Query Language (SQL) introduction}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Domain specific language
+    \item Defines, query and updates data
+    \item Mostly portable and often performance tuning required
+    \item Composed of \textbf{tokens}:
+    \begin{itemize}
+        \item \textbf{Keywords}: CREATE, TABLE, SELECT \dots etc
+        \item \textbf{Ordinary identifier}: \textit{x}, \textit{y}, \textit{movies}
+        \item \textbf{Numbers}:3, 4.1, 1e-9
+        \item \textbf{Delimited identifiers}: "Peter, Mary"
+    \end{itemize}
+    \item  SQL are case-sensitive
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Creating a table}
+
+\begin{verbatim}
+CREATE TABLE movies (
+    title varchar(100),
+    year int,
+    length int,
+    genre char(16)
+);
+\end{verbatim}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex15.JPG}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Inserting data into a table}
+
+\begin{verbatim}
+INSERT INTO movies
+    VALUES (
+    "Gone with the Wind”,
+    1939,
+    231,
+    "Drama”
+);
+\end{verbatim}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex16.JPG}
+\end{figure}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extracting data from table}
+
+\begin{verbatim}
+SELECT * from movies;
+sqlite> select * from movies;
+
+Gone with the Wind|1939|231|Drama
+Star Wars|1977|124|SF
+Wayne's World|1992|95|Comedy
+\end{verbatim}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex17.JPG}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extracting data from a table with filter}
+
+\begin{verbatim}
+SELECT * from movies WHERE year = 1977;
+
+Star Wars|1977|124|SF
+\end{verbatim}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
