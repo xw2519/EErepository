@@ -340,6 +340,155 @@ SELECT * from movies WHERE year = 1977;
 Star Wars|1977|124|SF
 \end{verbatim}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mapping ERM to Relations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Entities and attributes}
+
+\begin{itemize}
+    \item Simple attributes: 
+    \begin{itemize}
+        \item Entity maps to relation with same attributes 
+        \item Each entity in set becomes a row in relation 
+        \item Entity primary key is relation primary key 
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex18.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex19.JPG}
+\end{figure}
+
+\pagebreak
+
+\begin{itemize}
+    \item Composite attributes:
+    \begin{itemize}
+        \item Composite attributes become list of attributes
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex20.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex21.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item Multi-valued attributes:
+    \begin{itemize}
+        \item Attributes become own relation
+        \item Relation linked to original set with \textbf{foreign key}
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex22.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex23.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item Derived attributes:
+    \begin{itemize}
+        \item Not directly supported
+        \item Can be defined and used \textbf{within queries}
+    \end{itemize}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Relationship sets}
+
+\begin{itemize}
+    \item Many-to-many relationship:
+    \begin{itemize}
+        \item Relation with two foreign keys 
+        \item Entity primary key is relation primary key 
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex24.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex25.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item One-to-many relationship:
+    \begin{itemize}
+        \item Primary key of one as foreign key in another
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex26.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex27.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item One-to-one relationship:
+    \begin{itemize}
+        \item Primary key of one as foreign key in another
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex28.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex29.JPG}
+\end{figure}
+
+\pagebreak
+
+\begin{itemize}
+    \item Multi-way relationship:
+    \begin{itemize}
+        \item Form relation with foreign keys to entity sets
+        \item Entity foreign keys form relation primary key
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex30.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex31.JPG}
+\end{figure}
+
+\begin{itemize}
+    \item One-way relationship:
+    \begin{itemize}
+        \item Each role is foreign key on entity set
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex32.JPG}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.5]{Ex33.JPG}
+\end{figure}
+
+
+
+
 
 
 
