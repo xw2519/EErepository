@@ -1,0 +1,62 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{amsmath,bm}
+\usepackage{graphicx}
+\def\MLine#1{\par\hspace*{-\leftmargin}\parbox{\textwidth}{\[#1\]}}
+\graphicspath{ {./Images/} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{2: LTI}
+\author{Xin Wang}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Impulse response $H$ of an LTI system}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+  \item Impulse response represents the LTI system behaviour
+  \item Unknown systems determined with impulse input:
+  \begin{itemize}
+    \item Discrete: Unit impulse function 
+    \item Continuous: Approximated Dirac delta function
+  \end{itemize}
+  \item Response used to determine the output to any input
+  \item Linked to system inputs:
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.45]{1.JPG}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Convolution $*$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+  \item LTI output is convolution of input with impulse response
+  \begin{itemize}
+    \item Continuous (Convolution integral):
+    $$
+      y(t) = x(t) * h(t) = \int_{-\infty}^\infty x(\tau)h(t-\tau) d\tau
+    $$
+    \item Discrete (Convolution sum):
+    $$
+      y[n] = x[n] * h[n] = \sum_{k=-\infty}^\infty x[k]h[n-k]
+    $$
+  \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

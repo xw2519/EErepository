@@ -341,7 +341,7 @@ Star Wars|1977|124|SF
 \end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Mapping ERM to Relations}
+\section{\textbf{Mapping ERM to Relations}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Entities and attributes}
 
@@ -487,7 +487,140 @@ Star Wars|1977|124|SF
 \end{figure}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Networks intro}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{itemize}
+    \item \textbf{Information}: Transmissible signal to receiver 
+    \item \textbf{Data}: Information in machine-encoded form
+    \item \textbf{Network}: Graph of nodes and channels:
+    \begin{itemize}
+        \item \textbf{Channel}: Path over which signals flow 
+        \item \textbf{Node}: Device within network sending/receiving data 
+    \end{itemize}
+    \item Network metrics:
+    \begin{itemize}
+        \item Bandwidth: Throughout of many bytes 
+        \item Latency: Delivery time for one byte 
+        \item Jitter: Variation in latency 
+        \item Loss: Proportion of bytes lost 
+    \end{itemize}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Types of networks}}
+
+\begin{itemize}
+    \item Network switching: How network is implemented
+    \begin{itemize}
+        \item Circuit switching 
+        \item Packet switching
+    \end{itemize}
+    \item Network connection service: What network offers to users
+    \begin{itemize}
+        \item Connectionless 
+        \item Connection orientated
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Network switching}
+
+\begin{itemize}
+    \item Circuit switching: 
+    \begin{itemize}
+        \item Circuit maintained for duration of use 
+        \item Three stages:
+        \begin{itemize}
+            \item Circuit establishment i.e. route established 
+            \item Data transfer 
+            \item Circuit disconnection
+        \end{itemize}
+        \item Only overheads are set-up costs
+        \item Constant costs per unit time even if not in use 
+        \item If any link/switch breaks, entire circuit breaks 
+    \end{itemize}
+
+    \item Packet switching: 
+    \begin{itemize}
+        \item Data sent as small packets of bits 
+        \item Each packet routed independently
+        \begin{itemize}
+            \item Each packet must contain routing information
+        \end{itemize}
+        \item Packets may arrive out of order or get lost 
+        \item Cost charged for each packet sent through 
+    \end{itemize}
+\end{itemize}
+\begin{figure} [h!]
+    \centering
+    \includegraphics[scale=0.4]{Ex34.JPG}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Types of connection service}
+
+\begin{itemize}
+    \item Connectionless service:
+    \begin{itemize}
+        \item No route is maintained
+        \item Data is transmitted as packets 
+        \item Packets may be re-ordered 
+        \item No setups initially
+        \item Similar to Packet Switching
+    \end{itemize}
+    \item Connection-orientated service:
+    \begin{itemize}
+        \item Route is maintained 
+        \item Data transmitted as bytes along connection 
+        \item Data arrives in the same order it was sent 
+        \item Route established before data can be sent 
+        \item Similar to Circuit Switching 
+    \end{itemize}
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Virtual Circuit Switching}
+
+\begin{itemize}
+    \item Packeted-switching and Connection-orientated preferred
+    \begin{itemize}
+        \item Packet-switching: Robust routing, efficient sharing
+        \item Connection-orientated: Reliable and in-order sending 
+    \end{itemize}
+    \item Virtual circuit provide connection using packets 
+    \begin{itemize}
+        \item Virtual circuit setup over packet-switched network
+        \item Each node remembers virtual route  
+        \item Data sent as packets along virtual connection 
+        \item Packet are routed on established virtual route
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quality of Service}
+
+\begin{itemize}
+    \item \textbf{Quality of Service} (QoS) guarantees: 
+    \begin{itemize}
+        \item Bandwidth: Minimum bandwidth along route  
+        \item Latency: Maximum latency along route 
+    \end{itemize}
+
+    \item Circuit-switched: Worst channel in route 
+    \begin{itemize}
+        \item Determined when route is established
+    \end{itemize}
+    \item Packet-switched: QoS very difficult to guarantee
+    \begin{itemize}
+        \item Bandwidth varies according to demand 
+        \item Latency varies according to channel congestion
+    \end{itemize}
+    \item Virtual circuit: QoS with \textbf{partial resource allocation}
+\end{itemize}
 
 
 
